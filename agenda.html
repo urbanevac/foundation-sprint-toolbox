@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation Sprint Agenda</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 40px;
+            color: #333;
+            text-align: center;
+        }
+
+        .agenda-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .day-card {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .day-title {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .day-title .material-icons {
+            color: #3f51b5;
+        }
+
+        .activity {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        .activity:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .activity p {
+            margin: 0;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #555;
+        }
+
+        .activity .material-icons {
+            color: #3f51b5;
+            font-size: 20px;
+        }
+
+        .activity a {
+            text-decoration: none;
+            color: #3f51b5;
+            font-weight: 500;
+        }
+
+        .activity a:hover {
+            text-decoration: underline;
+        }
+
+        .section-content {
+            display: none;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .section-content h5 {
+            margin: 0 0 10px 0;
+            color: #333;
+            font-size: 1.1rem;
+        }
+
+        .section-content ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .section-content li {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .agenda-container {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .title {
+                font-size: 2rem;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Foundation Sprint Agenda</div>
+        
+        <div class="agenda-container">
+            <!-- Day 1 -->
+            <div class="day-card">
+                <h4 class="day-title">
+                    <i class="material-icons">flag</i>
+                    Day 1: Basics & Differentiation
+                </h4>
+
+                <div class="activity">
+                    <p><i class="material-icons">autorenew</i> 10:00 AM - <a href="#" onclick="showSection('reset')">Reset</a></p>
+                    <div id="reset" class="section-content">
+                        <h5>Reset</h5>
+                        <ul>
+                            <li>Introductions</li>
+                            <li>Give a tour of the Foundation Sprint</li>
+                            <li>Introduce "Get started not perfect"</li>
+                            <li>Introduce "Work alone together"</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="activity">
+                    <p><i class="material-icons">check_box</i> 10:30 AM - <a href="#" onclick="showSection('basics')">Basics</a></p>
+                    <div id="basics" class="section-content">
+                        <h5>Basics</h5>
+                        <ul>
+                            <li>Choose your target customer</li>
+                            <li>Choose your customer's problem</li>
+                            <li>Identify your advantages</li>
+                            <li>List your competitors</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="activity">
+                    <p><i class="material-icons">free_breakfast</i> 11:30 AM - Break</p>
+                </div>
+
+                <div class="activity">
+                    <p><i class="material-icons">compare_arrows</i> 12:00 PM - <a href="#" onclick="showSection('differentiation')">Differentiation</a></p>
+                    <div id="differentiation" class="section-content">
+                        <h5>Differentiation</h5>
+                        <ul>
+                            <li>Differentiation classics</li>
+                            <li>Choose your own differentiators</li>
+                            <li>Score your custom differentiators</li>
+                            <li>Choose differentiators</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="activity">
+                    <p><i class="material-icons">lunch_dining</i> 1:00 PM - Break</p>
+                </div>
+
+                <div class="activity">
+                    <p><i class="material-icons">grid_on</i> 2:00 PM - <a href="#" onclick="showSection('2x2chart')">2x2 Differentiation Chart</a></p>
+                    <div id="2x2chart" class="section-content">
+                        <h5>2x2 Differentiation Chart</h5>
+                        <ul>
+                            <li>Make a 2x2 differentiation chart</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="activity">
+                    <p><i class="material-icons">edit</i> 2:45 PM - <a href="#" onclick="showSection('principles')">Draft Practical Principles</a></p>
+                    <div id="principles" class="section-content">
+                        <h5>Draft Practical Principles</h5>
+                        <ul>
+                            <li>Note-and-Vote to write practical principles</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="activity">
+                    <p><i class="material-icons">exit_to_app</i> 3:30 PM - End of Day 1</p>
+                </div>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="day-card">
+                <h4 class="day-title">
+                    <i class="material-icons">explore</i>
+                    Day 2: Approach & Magic Lenses
+                </h4>
+
+                <div class="activity">
+                    <p><i class="material-icons">alt_route</i> 10:00 AM - <a href="#" onclick="showSection('approach')">Approach</a></p>
+                    <div id="approach" class="section-content">
+                        <h5>Approach</h5>
+                        <ul>
+                            <li>List all possible approaches</li>
+                            <li>Make a one-page summary for each approach</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="activity">
+                    <p><i class="material-icons">coffee</i> 11:00 AM - Break</p>
+                </div>
+
+                <div class="activity">
+                    <p><i class="material-icons">zoom_in</i> 11:30 AM - <a href="#" onclick="showSection('magic')">Magic Lenses</a></p>
+                    <div id="magic" class="section-content">
+                        <h5>Magic Lenses</h5>
+                        <ul>
+                            <li>Assign a color to each approach</li>
+                            <li>List criteria for each approach</li>
+                            <li>Make "team of rivals" charts</li>
+                            <li>Place your approaches on each chart</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="activity">
+                    <p><i class="material-icons">restaurant_menu</i> 1:00 PM - Break</p>
+                </div>
+
+                <div class="activity">
+                    <p><i class="material-icons">rate_review</i> 2:00 PM - <a href="#" onclick="showSection('review')">Review and Custom Charts</a></p>
+                    <div id="review" class="section-content">
+                        <h5>Review and Custom Charts</h5>
+                        <ul>
+                            <li>Review the criteria</li>
+                            <li>Make custom 2x2 charts</li>
+                            <li>Try your differentiation 2x2 chart</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="activity">
+                    <p><i class="material-icons">zoom_out_map</i> 2:45 PM - <a href="#" onclick="showSection('zoom')">Zoom Out and Decide</a></p>
+                    <div id="zoom" class="section-content">
+                        <h5>Zoom Out and Decide</h5>
+                        <ul>
+                            <li>Zoom out and review</li>
+                            <li>The Decider decides</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="activity">
+                    <p><i class="material-icons">lightbulb</i> 3:15 PM - <a href="#" onclick="showSection('hypothesis')">Founding Hypothesis</a></p>
+                    <div id="hypothesis" class="section-content">
+                        <h5>Founding Hypothesis</h5>
+                        <ul>
+                            <li>Fill out the Founding Hypothesis</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="activity">
+                    <p><i class="material-icons">celebration</i> 3:30 PM - Sprint Complete!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            var x = document.getElementById(sectionId);
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

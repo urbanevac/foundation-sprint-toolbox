@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop Icebreaker Ideas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f3f4f6;
+            font-family: 'Roboto', sans-serif;
+            padding: 1rem;
+            flex-direction: column;
+        }
+
+        .card {
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            width: min(90vw, 500px);
+            aspect-ratio: 5/6;
+            perspective: 1000px;
+            overflow: hidden;
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .card.flipped .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .card-back {
+            background: #f9f9f9;
+            transform: rotateY(180deg);
+        }
+
+        .topic-display {
+            font-size: clamp(1.25rem, 3vw, 1.5rem);
+            color: #333;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .button-container {
+            margin-top: 1rem;
+        }
+
+        .generate-button {
+            padding: 0.75rem;
+            font-size: 1.25rem;
+            cursor: pointer;
+            background: #5A5A5A;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .generate-button:hover {
+            background-color: #3e3e3e;
+        }
+
+        .footer-text {
+            position: absolute;
+            bottom: 1rem;
+            width: 100%;
+            text-align: center;
+            font-size: 0.875rem;
+            color: #333;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 40px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Icebreaker Ideas</h1>
+    <div class="card">
+        <div class="card-inner">
+            <div class="card-front">
+                <div class="topic-display" id="topicDisplay">Dream travel destination?</div>
+                <div class="button-container">
+                    <button class="generate-button" id="generateButton"><i class="fas fa-lightbulb"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const topics = [
+            "Dream travel destination?",
+            "Hidden talent?",
+            "Dinner with a historical figure?",
+            "Best book you read recently?",
+            "New skill you want to learn?",
+            "Most unusual food tried?",
+            "Bucket list location?",
+            "Desired superpower?",
+            "Most memorable vacation?",
+            "Fictional character to meet?",
+            "Favorite way to relax?",
+            "Hobby you want to try?",
+            "Favorite time period to live in?",
+            "Most interesting recent learning?",
+            "Celebrity you'd like to meet?",
+            "Favorite music genre?",
+            "Language you want to learn?",
+            "Best advice you've received?",
+            "Proudest achievement?",
+            "Cause you'd donate to?"
+        ];
+
+        const topicDisplay = document.getElementById('topicDisplay');
+        const generateButton = document.getElementById('generateButton');
+
+        function generateRandomTopic() {
+            const randomIndex = Math.floor(Math.random() * topics.length);
+            topicDisplay.textContent = topics[randomIndex];
+        }
+
+        // Event listener for generating a new random topic
+        generateButton.addEventListener('click', function() {
+            generateRandomTopic();
+        });
+
+        // Initialize by displaying the first idea
+        generateRandomTopic();
+    </script>
+</body>
+</html>

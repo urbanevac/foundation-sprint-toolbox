@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation Sprint Toolbox</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            text-align: center;
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 60px;
+            color: #555;
+        }
+
+        .tools-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            column-gap: 2rem;
+            row-gap: 2rem;
+            padding: 0;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .tools-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .tool-card {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s;
+            margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
+            max-width: 300px;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .tool-card .icon {
+            font-size: 3rem;
+            color: #3f51b5;
+            margin-bottom: 20px;
+        }
+
+        .tool-card h3 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .tool-card p {
+            font-size: 1rem;
+            color: #777;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .tool-card a {
+            text-decoration: none;
+            background-color: #3f51b5;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        .tool-card a:hover {
+            background-color: #303f9f;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">Foundation Sprint Toolbox</div>
+        <div class="subtitle">Your collection of tools for successful workshops and sprints</div>
+
+        <div class="tools-container">
+
+         <div class="tool-card">
+                <div class="icon">🗓️</div>
+                <h3>Agenda</h3>
+                <p>Plan and structure your Foundation Sprint workshop.</p>
+                <a href="agenda.html">View</a>
+            </div>
+
+            <div class="tool-card">
+
+                <div class="icon">⏰</div>
+                <h3>Workshop Timer</h3>
+                <p>Set a timer for your workshops or sprints, and keep track of time effortlessly.</p>
+                <a href="timer.html">Start Now</a>
+            </div>
+
+            <div class="tool-card">
+                <div class="icon">💡</div>
+                <h3>Icebreaker Ideas</h3>
+                <p>Get a random icebreaker idea to help start your workshop or team meeting.</p>
+                <a href="icebreaker.html">Try it Out</a>
+            </div>
+
+        <div class="tool-card">
+                <div class="icon">🟰</div>
+                <h3>The Basics</h3>
+                <p>Essential resources and guides for running successful workshops and sprints.</p>
+                <a href="#"><I>Coming Soon</I></a>
+            </div>
+
+
+        <div class="tool-card">
+                <div class="icon">📜</div>
+                <h3>Mini Manifesto</h3>
+                <p>Craft a concise and inspiring manifesto for your team or project.</p>
+                <a href="#"><I>Coming Soon</I></a>
+            </div>
+     
+
+            <div class="tool-card">
+                <div class="icon">🎓</div>
+                <h3>Founding Hypothesis</h3>
+                <p>Generate a strong founding hypothesis to guide your startup or project.</p>
+                <a href="hypothesis.html">Create Hypothesis</a>
+            </div>
+
+   
+    
+           </div>
+    </div>
+
+    <footer>
+        <p>Made with ❤️ in Milton Keynes</p>
+    </footer>
+</body>
+
+</html>
